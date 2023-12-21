@@ -14,7 +14,7 @@ const createTodo = async (req, res) => {
 
   try {
     const data = await user.save();
-    res.send({
+    res.status(201).send({
       message: "Todo created successfully!!",
       user: data,
     });
